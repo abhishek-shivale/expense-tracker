@@ -13,7 +13,6 @@ const handler = NextAuth({
   ],
   adapter: PrismaAdapter(prisma),
   secret: process.env.NEXTAUTH_SECRET,
-  debug:true,
   callbacks: {
     async session({ session, user }) {
       if (session.user) {

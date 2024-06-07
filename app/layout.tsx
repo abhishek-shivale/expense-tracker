@@ -4,6 +4,7 @@ import { SessionProvider } from "next-auth/react";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import SessioWrapper from "@/components/global/SessioWrapper";
+import { ThemeProvider } from "@/components/ui/theme-provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -24,17 +25,20 @@ export default function RootLayout({
   session: any;
 }>) {
   return (
-      <html lang="en">
-        <body
-          className={cn(
-            "min-h-screen bg-background font-sans antialiased",
-            fontSans.variable
-          )}
+    <html lang="en">
+      <body
+        className={cn("min-h-screen font-sans antialiased", fontSans.variable)}
+      >
+        {" "}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
         >
-          <SessioWrapper session={session}>
-          {children}
-          </SessioWrapper>
-        </body>
-      </html>
+          <SessioWrapper session={session}>{children}</SessioWrapper>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
