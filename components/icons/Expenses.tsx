@@ -6,7 +6,7 @@ type Props = { selected: boolean }
 
 function Expenses({ selected }: Props) {
   return (
-    <Receipt color='white' />
+    <Receipt color='white' strokeWidth={1.3} />
   )
 }
 

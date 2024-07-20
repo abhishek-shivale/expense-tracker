@@ -6,8 +6,9 @@ type Props = { selected: boolean }
 
 function Home({ selected }: Props) {
   return (
-    <House  color='white'  />
+    <House  color='white' strokeWidth={1.3}  />
   )
 }
 
 export default Home
+

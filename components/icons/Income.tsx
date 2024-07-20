@@ -5,7 +5,7 @@ type Props = { selected: boolean }
 
 function Income({ selected }: Props) {
   return (
-    <HandCoins  color='white' />
+    <HandCoins  color='white' strokeWidth={1.3} />
   )
 }
 

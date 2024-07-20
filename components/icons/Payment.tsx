@@ -5,7 +5,7 @@ type Props = { selected: boolean }
 
 function Payment({ selected }: Props) {
   return (
-    <CreditCard  color='white' />
+    <CreditCard  color='white' strokeWidth={1.3} />
   )
 }
 

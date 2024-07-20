@@ -5,7 +5,7 @@ type Props = { selected: boolean }
 
 function Investments({ selected }: Props) {
   return (
-    <Landmark  color='white' />
+    <Landmark  color='white' strokeWidth={1.3} />
   )
 }
 
